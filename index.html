@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'HÉRITAGE COFFEE ROASTERS ｜ 傳承・私人咖啡典藏館</title>
+  <meta name="description" content="L'HÉRITAGE 傳承・私人咖啡典藏館。專為層峰名仕與美學藏家打造的老錢風靜謐咖啡會所，提供百年莊園微批次咖啡、法式私廚甜點、莊園絲囊茶包線上販賣與預約制隱密沙龍。">
+  <meta name="theme-color" content="#120D09">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Noto+Serif+TC:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= 頂部導航列 ================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#" class="brand-crest">
+        <div class="crest-logo">LH</div>
+        <div class="brand-text">
+          <h1>L'HÉRITAGE</h1>
+          <span>PRIVATE ROASTERS</span>
+        </div>
+      </a>
+
+      <!-- 導航連結 -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#philosophy">開店旨意</a></li>
+          <li><a href="#craft">萃取工藝</a></li>
+          <li><a href="#seasonal">季節限定</a></li>
+          <li><a href="#menu">典藏菜單</a></li>
+          <li><a href="#teaSection">典藏名茶</a></li>
+          <li><a href="#interior">店內設計</a></li>
+          <li><a href="#reservation">席位預約</a></li>
+        </ul>
+      </nav>
+
+      <!-- 操作按鈕群 -->
+      <div class="nav-actions">
+        <!-- 放鬆黑膠爵士氛圍音樂開關 -->
+        <button class="sound-toggle-btn" id="ambientSoundBtn" title="點擊切換放鬆黑膠氛圍聲景">
+          <div class="sound-icon-wave">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="sound-text">放鬆黑膠氛圍</span>
+        </button>
+
+        <!-- 線上典藏購物袋按鈕 -->
+        <button class="nav-cart-btn" id="navCartBtn" title="開啟典藏購物袋">
+          <span>🛍 購物袋</span>
+          <span class="cart-count-badge" id="cartCountBadge" style="display: none;">0</span>
+        </button>
+
+        <!-- 席位預約按鈕 -->
+        <a href="#reservation" class="btn-reserve-nav">預約席位</a>
+
+        <!-- 後台管理入口 (CRUD 功能) -->
+        <button class="btn-admin-nav" onclick="openAdminModal()" title="進入私廚後台 CRUD 管理介面">
+          ⚙ 典藏管家
+        </button>
+
+        <!-- 行動版選單切換按鈕 -->
+        <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= 橫幅主視覺區 (Hero) ================= -->
+  <section class="hero-section" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-subtitle font-en-display">ESTABLISHED 1928 ｜ PRIVATE CONNOISSEUR SALON</div>
+      <h1 class="hero-title">時間沉澱的奢華</h1>
+      <div class="hero-tagline">“Timeless Quiet Luxury for Discerning Souls”</div>
+      <div class="heritage-divider"><span>❖</span></div>
+      <p class="hero-desc">
+        隱蔽於大安青田林蔭深處的古典私邸。以百年莊園微批次生豆、波爾多橡木桶熟成、古董活塞手藝與東方名茶絲囊，為追求心靈純粹的極少數名仕，呈獻一段與時光溫柔相敬的感官儀式。
+      </p>
+      <div class="hero-cta-group">
+        <a href="#menu" class="btn-luxury btn-primary-gold">探索典藏菜單</a>
+        <a href="#teaSection" class="btn-luxury btn-outline-gold">選購莊園茶包</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 開店旨意版塊 (Philosophy) ================= -->
+  <section class="section-pad" id="philosophy">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-pretitle">OUR PHILOSOPHY & HERITAGE</span>
+        <h2 class="section-title">開店旨意・喧囂之外的靜謐庇護所</h2>
+        <div class="heritage-divider"><span>❖</span></div>
+        <p class="section-subtitle">
+          真正的奢華從來不是高調的喧鬧，而是對歲月、風土與精準匠心的絕對敬畏。
+        </p>
+      </div>
+
+      <div class="philosophy-grid">
+        <div class="philosophy-image-box">
+          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=80" alt="L'HÉRITAGE 典藏咖啡莊園" class="philosophy-img" loading="lazy">
+          <div class="philosophy-badge">
+            <span class="badge-year">1928</span>
+            <span class="badge-label">FOUR GENERATIONS</span>
+          </div>
+        </div>
+
+        <div class="philosophy-text">
+          <p>
+            在這個被演算法與速食文化追趕的時代，多數事物都在追求規模與速度，我們卻選擇放慢腳步。L'HÉRITAGE 隱蔽於靜謐林蔭的庭園深處，傳承家族四代尋豆與杯測手藝，專為追求極致品味的智者打造一座遠離世俗擾攘的感官庇護所。
+          </p>
+          <p>
+            我們堅拒工業化的流水線作業，每年僅由莊園主理人親赴中南美洲高海拔微型莊園，親自挑選全球產量不足 0.1% 的百年老樹原生種生豆。每一批咖啡豆皆於法國波爾多一級酒莊橡木桶中沉靜熟成，再經由資深匠人指尖的溫控炭火細膩烘焙。
+          </p>
+          <p>
+            在這裡，我們不談翻桌率，只專注於您握在手中的那一盞溫熱。老橡木的沉香、黃銅微光的流轉、黑膠唱片的柔和音紋，與唇齒間綻放的頂級藝伎花香交織成一首無聲的詩。這不僅是一杯咖啡，更是獻給少數懂得品味的靈魂一段與時間相敬的優雅停頓。
+          </p>
+
+          <!-- 三大核心價值卡片 -->
+          <div class="philosophy-values" id="philosophyValues">
+            <!-- 由 app.js 動態渲染 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 製做方法版塊 (Brewing Craftsmanship) ================= -->
+  <section class="section-pad" id="craft" style="background: rgba(22, 16, 11, 0.6); border-top: 1px solid var(--border-gold); border-bottom: 1px solid var(--border-gold);">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-pretitle">ARTISANAL EXTRACTION</span>
+        <h2 class="section-title">製做方法・極致萃取的手藝哲學</h2>
+        <div class="heritage-divider"><span>❖</span></div>
+        <p class="section-subtitle">
+          微批次莊園豆的靈魂是脆弱而高貴的。我們採用四種傳承古典的萃取工藝，精確拿捏水溫、秒數與壓力，將風土層次極致釋放。
+        </p>
+      </div>
+
+      <div class="craft-grid" id="craftMethodsGrid">
+        <!-- 由 app.js 動態渲染四大工藝 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 特別季節限定商品 (Seasonal Specials) ================= -->
+  <section class="section-pad seasonal-section" id="seasonal">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-pretitle">WINTER SOLSTICE EDITION</span>
+        <h2 class="section-title">特別季節限定・冬至波本黑金典藏</h2>
+        <div class="heritage-divider"><span>❖</span></div>
+        <p class="section-subtitle">
+          順應節氣更迭的專屬限期鉅獻。單一橡木桶窖藏陳釀，不含酒精卻蘊含醉人黑櫻桃與煙燻波本香氣，每日僅限 10 席。
+        </p>
+      </div>
+
+      <div class="seasonal-banner">
+        <div class="seasonal-banner-content" id="seasonalBannerContent">
+          <!-- 由 app.js 動態渲染限定品項 -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 菜單展示版塊（咖啡 + 甜點） (Menu) ================= -->
+  <section class="section-pad" id="menu">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-pretitle">CURATED TASTING MENU</span>
+        <h2 class="section-title">典藏菜單・咖啡與私廚法式甜點</h2>
+        <div class="heritage-divider"><span>❖</span></div>
+        <p class="section-subtitle">
+          每一款咖啡皆標註完整產區、海拔、處理法與風味筆記；每一道甜點皆為自家主廚當日限量現點現做，交織出最無懈可擊的風味二重奏。
+        </p>
+      </div>
+
+      <!-- 菜單控制列：分類切換標籤 & 關鍵字搜尋 -->
+      <div class="menu-controls">
+        <div class="menu-filter-tabs">
+          <button class="menu-tab-btn active" data-category="all">全部典藏品項</button>
+          <button class="menu-tab-btn" data-category="coffee">頂級珍稀咖啡</button>
+          <button class="menu-tab-btn" data-category="dessert">法式私廚甜點</button>
+          <button class="menu-tab-btn" data-category="seasonal">特別季節限定</button>
+        </div>
+
+        <div class="menu-search-box">
+          <span class="menu-search-icon">🔍</span>
+          <input type="text" id="menuSearchInput" class="menu-search-input" placeholder="搜尋風味筆記、產區、品項名稱（如：藝伎、黑松露、藍山）...">
+        </div>
+      </div>
+
+      <!-- 菜單商品網格 -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- 由 app.js 動態渲染菜單品項卡片 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 莊園名茶專區 (Artisanal Tea Bags & Online Store) ================= -->
+  <section class="section-pad" id="teaSection" style="background: rgba(22, 16, 11, 0.6); border-top: 1px solid var(--border-gold); border-bottom: 1px solid var(--border-gold);">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-pretitle">HERITAGE ARTISANAL TEAS</span>
+        <h2 class="section-title">莊園名茶・東方風雅典藏茶包</h2>
+        <div class="heritage-divider"><span>❖</span></div>
+        <p class="section-subtitle">
+          採摘百年古樹原葉，以日本頂級純絲囊袋精緻封存。多款原木禮盒與密封金罐規格，線上選購由專屬管家提供手寫火漆封蠟直送到府。
+        </p>
+      </div>
+
+      <!-- 茶包卡片網格 -->
+      <div class="tea-grid" id="teaGrid">
+        <!-- 由 app.js 動態渲染茶包卡片與多規格選擇器 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 店內設計版塊 (Interior Design) ================= -->
+  <section class="section-pad" id="interior" style="background: rgba(18, 13, 9, 0.7); border-top: 1px solid var(--border-gold); border-bottom: 1px solid var(--border-gold);">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-pretitle">SPATIAL ARCHITECTURE</span>
+        <h2 class="section-title">店內設計・安頓身心的老錢美學</h2>
+        <div class="heritage-divider"><span>❖</span></div>
+        <p class="section-subtitle">
+          頂天立地百年橡木書牆、西班牙 Nero Marquina 墨黑大理石吧台與英倫 Chesterfield 揉皮單椅。捨棄喧嘩的冷白強光，以低照度黃銅暖光包裹每一寸私密視界。
+        </p>
+      </div>
+
+      <div class="interior-grid" id="interiorGrid">
+        <!-- 由 app.js 動態渲染店內四個專屬空間 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VIP 私密預約訂位版塊 (Reservation) ================= -->
+  <section class="section-pad" id="reservation">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-pretitle">BESPOKE RESERVATION</span>
+        <h2 class="section-title">私密席位預約・專屬管家接待</h2>
+        <div class="heritage-divider"><span>❖</span></div>
+        <p class="section-subtitle">
+          為確保每位名仕享有絕對純粹的寧靜與客製化侍豆體驗，本館全面採預約制接待，每日名額極其珍稀。
+        </p>
+      </div>
+
+      <div class="reservation-box">
+        <form id="reservationForm">
+          <div class="reservation-form-grid">
+            <div class="form-group">
+              <label class="form-label">貴賓尊姓大名 *</label>
+              <input type="text" id="resName" class="form-input" placeholder="例如：林先生 / 陳董事長" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">聯絡專線電話 *</label>
+              <input type="tel" id="resPhone" class="form-input" placeholder="0912-345-678" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">電子信箱 (用於傳送確認信)</label>
+              <input type="email" id="resEmail" class="form-input" placeholder="client@heritage.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">預約賞味空間 *</label>
+              <select id="resSalon" class="form-select" required>
+                <option value="百年英倫橡木圖書沙龍">百年英倫橡木圖書沙龍 (The Oak Library)</option>
+                <option value="黑白根大理石手沖鑑賞席">黑白根大理石手沖鑑賞席 (The Marble Bar)</option>
+                <option value="法式私人庭園溫室花廳">法式私人庭園溫室花廳 (The Glass Conservatory)</option>
+                <option value="極私密名仕雪茄與鑑賞廂房">極私密名仕雪茄與鑑賞廂房 (The Sovereign Lounge)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">到訪貴賓人數 *</label>
+              <select id="resGuests" class="form-select" required>
+                <option value="1">1 位貴賓 (專屬沉思)</option>
+                <option value="2" selected>2 位貴賓 (私密品飲)</option>
+                <option value="4">3-4 位貴賓 (沙龍雅集)</option>
+                <option value="6">5-6 位貴賓 (包場專案)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">預約日期 *</label>
+              <input type="date" id="resDate" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">預約時段 *</label>
+              <select id="resTime" class="form-select" required>
+                <option value="13:30">13:30 - 15:30 (午後暖陽)</option>
+                <option value="15:30" selected>15:30 - 17:30 (法式午茶)</option>
+                <option value="17:30">17:30 - 19:30 (黃昏靜謐)</option>
+                <option value="19:30">19:30 - 21:00 (夜間夜曲)</option>
+              </select>
+            </div>
+
+            <div class="form-group form-full">
+              <label class="form-label">品味偏好或特殊需求備註</label>
+              <textarea id="resNotes" class="form-textarea" rows="3" placeholder="例如：希望優先品鑑冬至限定波本藝伎、過敏食材、商務對談需安排絕密廂房..."></textarea>
+            </div>
+
+            <div class="form-full">
+              <div class="reservation-notice">
+                ❖ 預約須知：送出預約後，專屬侍豆管家將於 2 小時內透過電話與您確認席位細節。若需更改時段，敬請提前 24 小時專線告知。
+              </div>
+            </div>
+
+            <div class="form-full" style="text-align: center; margin-top: 12px;">
+              <button type="submit" class="btn-luxury btn-primary-gold" style="width: 100%; max-width: 380px;">
+                確認提交尊榮預約申請
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 頁尾 (Footer) ================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2>L'HÉRITAGE</h2>
+          <div style="font-size: 0.76rem; letter-spacing: 0.2em; color: var(--gold-primary); margin-bottom: 12px;">PRIVATE COFFEE CONNOISSEURS</div>
+          <p>
+            時間沉澱的奢華，只為少數懂得靜謐的靈魂。<br>
+            以古典手藝淬鍊全球頂級莊園微批次咖啡與名茶絲囊。
+          </p>
+          <div style="color: var(--gold-light); font-size: 0.85rem;">
+            專屬會所專線：+886 2 2708 9988
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>導覽章節</h3>
+          <ul>
+            <li><a href="#philosophy">開店旨意</a></li>
+            <li><a href="#craft">四大工藝</a></li>
+            <li><a href="#seasonal">季節限定</a></li>
+            <li><a href="#menu">典藏菜單</a></li>
+            <li><a href="#teaSection">莊園名茶</a></li>
+            <li><a href="#interior">店內設計</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>會所資訊</h3>
+          <ul>
+            <li>台北市大安區青田街私邸 18 號</li>
+            <li>週二至週日 13:00 - 21:00</li>
+            <li>週一為莊園微批次烘豆閉館日</li>
+            <li>全面採預約接待制</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>管理與專題</h3>
+          <ul>
+            <li><a href="javascript:void(0)" onclick="openAdminModal()">⚙ 私廚後台 (CRUD)</a></li>
+            <li><a href="javascript:void(0)" onclick="handleResetAllData()">🔄 恢復原廠老錢設定</a></li>
+            <li><a href="javascript:void(0)" onclick="handleExportData()">💾 匯出資料備份 (JSON)</a></li>
+            <li><span style="color: var(--text-muted); font-size: 0.8rem;">自然科學與人工智慧 期末專題</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 L'HÉRITAGE COFFEE ROASTERS. ALL RIGHTS RESERVED.</div>
+        <div>商業設計系 CD000A 第 4 組 ｜ 張芸瑄・謝槿妍・李淳淳</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= 購物袋滑出式側邊欄 (Cart Drawer) ================= -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3 class="cart-drawer-title">
+          <span>🛍</span>
+          <span>典藏禮遇購物袋</span>
+        </h3>
+        <button class="modal-close-btn" id="cartDrawerCloseBtn" style="position: static; width: 32px; height: 32px; font-size: 1rem;">✕</button>
+      </div>
+
+      <div class="cart-items-list" id="cartItemsList">
+        <!-- 由 app.js 動態渲染 -->
+      </div>
+
+      <div class="cart-drawer-footer">
+        <div class="cart-summary-row">
+          <span>商品小計</span>
+          <span id="cartSubtotalAmount">NT$ 0</span>
+        </div>
+        <div class="cart-summary-row" style="color: var(--gold-light);">
+          <span>尊榮禮遇配送</span>
+          <span>黑貓冷鏈免費直送 (NT$ 0)</span>
+        </div>
+        <div class="cart-total-row">
+          <span>結帳總額</span>
+          <span class="cart-total-amount" id="cartTotalAmount">NT$ 0</span>
+        </div>
+        <button type="button" class="btn-luxury btn-primary-gold" id="proceedToCheckoutBtn" onclick="openCheckoutModal()" style="width: 100%;">
+          前往貴賓結帳禮遇 <span>→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 試跑結帳流程彈窗 (Checkout Modal) ================= -->
+  <div class="modal-overlay" id="checkoutModal" onclick="if(event.target===this) closeCheckoutModal()">
+    <div class="modal-container checkout-modal-container">
+      <button class="modal-close-btn" onclick="closeCheckoutModal()">✕</button>
+
+      <!-- 結帳表單填寫區 -->
+      <div id="checkoutFormView" style="padding: 36px;">
+        <div style="font-family: var(--font-display-en); font-size: 0.8rem; color: var(--gold-primary); letter-spacing: 0.15em; margin-bottom: 4px;">VIP CHECKOUT & DELIVERY</div>
+        <h2 style="font-size: 1.6rem; color: var(--gold-light); margin-bottom: 24px;">尊榮訂購與配送禮遇結帳</h2>
+
+        <form id="checkoutForm">
+          <div class="checkout-grid">
+            <!-- 左側：收件與支付資訊 -->
+            <div>
+              <h3 style="font-size: 1.05rem; color: var(--text-primary); margin-bottom: 14px; border-bottom: 1px solid var(--border-gold); padding-bottom: 6px;">
+                1. 貴賓收件資訊
+              </h3>
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+                <div class="form-group">
+                  <label class="form-label">收件貴賓姓名 *</label>
+                  <input type="text" id="chkName" class="form-input" placeholder="例如：林董事長 / 辜先生" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">專屬聯繫電話 *</label>
+                  <input type="tel" id="chkPhone" class="form-input" placeholder="0912-345-678" required>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 14px;">
+                <label class="form-label">電子信箱 (用於發送出貨與單號憑證)</label>
+                <input type="email" id="chkEmail" class="form-input" placeholder="client@heritage-estate.com">
+              </div>
+
+              <div class="form-group" style="margin-bottom: 14px;">
+                <label class="form-label">指定配送私邸地址 *</label>
+                <input type="text" id="chkAddress" class="form-input" placeholder="台北市信義區松智路私邸 66 號" required>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label class="form-label">期望送達時段</label>
+                <select id="chkDeliverySlot" class="form-select">
+                  <option value="上午時段 (09:00 - 12:00)">上午時段 (09:00 - 12:00 專人冷鏈)</option>
+                  <option value="午後時段 (14:00 - 18:00)" selected>午後時段 (14:00 - 18:00 私邸親啟)</option>
+                  <option value="不指定時段 (管家專線聯繫確認)">不指定時段 (管家專線聯繫確認)</option>
+                </select>
+              </div>
+
+              <h3 style="font-size: 1.05rem; color: var(--text-primary); margin-bottom: 12px; border-bottom: 1px solid var(--border-gold); padding-bottom: 6px;">
+                2. 頂級尊榮支付方式（試跑模擬）
+              </h3>
+
+              <div class="payment-method-options">
+                <label class="payment-option-card">
+                  <input type="radio" name="paymentMethod" value="Centurion 黑卡禮遇簽帳" checked>
+                  <div>
+                    <strong style="color: var(--gold-light);">American Express Centurion 黑卡禮遇</strong>
+                    <div style="font-size: 0.74rem; color: var(--text-muted);">專屬禮賓秘書後台直接授權簽帳</div>
+                  </div>
+                </label>
+
+                <label class="payment-option-card">
+                  <input type="radio" name="paymentMethod" value="Apple Pay 尊榮快速驗證">
+                  <div>
+                    <strong style="color: var(--text-primary);">Apple Pay / Touch ID 快速感應</strong>
+                    <div style="font-size: 0.74rem; color: var(--text-muted);">生物識別極速安全驗證</div>
+                  </div>
+                </label>
+
+                <label class="payment-option-card">
+                  <input type="radio" name="paymentMethod" value="私人家族辦公室專屬月結帳戶">
+                  <div>
+                    <strong style="color: var(--text-primary);">私人家族辦公室專屬月結帳戶</strong>
+                    <div style="font-size: 0.74rem; color: var(--text-muted);">會所專屬簽帳禮遇，按月結算</div>
+                  </div>
+                </label>
+
+                <label class="payment-option-card">
+                  <input type="radio" name="paymentMethod" value="瑞士銀行加密金庫轉帳 (USDT/BTC)">
+                  <div>
+                    <strong style="color: var(--text-primary);">加密資產信託支付 (Crypto)</strong>
+                    <div style="font-size: 0.74rem; color: var(--text-muted);">合規信託結算，極度私密</div>
+                  </div>
+                </label>
+              </div>
+
+              <div style="margin-top: 18px;">
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                  <input type="checkbox" id="chkGiftWrap" checked style="accent-color: var(--gold-primary); width: 16px; height: 16px;">
+                  <span style="font-size: 0.85rem; color: var(--gold-light);">附贈英倫胡桃木手作提袋與手寫火漆封蠟感謝信函</span>
+                </label>
+              </div>
+
+              <div class="form-group" style="margin-top: 14px;">
+                <label class="form-label">訂單備註需求</label>
+                <textarea id="chkNotes" class="form-textarea" rows="2" placeholder="例如：門禁警衛先聯絡、作為生日贈禮需避開價格標籤..."></textarea>
+              </div>
+            </div>
+
+            <!-- 右側：訂單審核 -->
+            <div>
+              <div class="order-review-box">
+                <h3 style="font-size: 1.05rem; color: var(--gold-light); margin-bottom: 12px; border-bottom: 1px solid var(--border-gold); padding-bottom: 6px;">
+                  訂單明細審核
+                </h3>
+                <div class="order-review-items" id="checkoutOrderReviewItems">
+                  <!-- 由 app.js 動態渲染 -->
+                </div>
+
+                <div style="padding-top: 10px;">
+                  <div class="cart-summary-row">
+                    <span>配送方式</span>
+                    <span style="color: var(--gold-light);">黑貓全程冷鏈 (免費)</span>
+                  </div>
+                  <div class="cart-summary-row">
+                    <span>包裝工藝</span>
+                    <span style="color: var(--gold-light);">手工火漆封蠟 (贈禮)</span>
+                  </div>
+                  <div class="cart-total-row">
+                    <span>應付總額</span>
+                    <span class="cart-total-amount" id="checkoutTotalDisplay">NT$ 0</span>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-luxury btn-primary-gold" style="width: 100%; padding: 14px 20px;">
+                  ❖ 確認授權付款並生成尊榮訂單
+                </button>
+                <div style="text-align: center; margin-top: 10px; font-size: 0.74rem; color: var(--text-muted);">
+                  本流程為沙盒安全模擬試跑結帳，資料將即時儲存至後台訂單管理庫。
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- 結帳成功收據憑證介面 -->
+      <div id="checkoutSuccessView" style="display: none;">
+        <div class="receipt-box">
+          <div class="wax-seal-badge">LH</div>
+          <div style="font-family: var(--font-display-en); font-size: 0.85rem; color: var(--gold-primary); letter-spacing: 0.2em; margin-bottom: 6px;">ORDER CONFIRMATION RECEIPT</div>
+          <h2 style="font-size: 1.8rem; color: #FFFDF9; margin-bottom: 12px;">尊榮訂單已正式成立</h2>
+          <div class="receipt-order-id" id="receiptOrderId">ORD-20261123-001</div>
+          <div class="heritage-divider"><span>❖</span></div>
+          
+          <p style="max-width: 540px; margin: 0 auto 24px; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.9;">
+            尊敬的 <strong id="receiptCustomerName" style="color: var(--gold-light);"></strong> 閣下，感謝您對 L'HÉRITAGE 莊園名茶的青睞。您的訂單已由典藏管家完成授權驗證，我們已安排專業茶師為您進行手工防潮封裝與火漆封印。
+          </p>
+
+          <div style="max-width: 480px; margin: 0 auto 30px; background: rgba(25, 18, 13, 0.7); border: 1px solid var(--border-gold); padding: 18px 24px; text-align: left; font-size: 0.86rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span style="color: var(--text-muted);">支付方式：</span>
+              <span id="receiptPaymentMethod" style="color: var(--gold-light);"></span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span style="color: var(--text-muted);">實付總額：</span>
+              <span id="receiptTotalAmount" style="color: var(--gold-light); font-weight: 700; font-family: var(--font-display-en);"></span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--text-muted);">配送私邸：</span>
+              <span id="receiptAddress" style="color: var(--text-primary);"></span>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 14px;">
+            <button type="button" class="btn-luxury btn-primary-gold" onclick="closeCheckoutModal()">
+              完成並繼續探索典藏
+            </button>
+            <button type="button" class="btn-luxury btn-outline-gold" onclick="closeCheckoutModal(); openAdminModal(); switchAdminTab('orders');">
+              前往後台檢視此筆訂單 (CRUD)
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= 互動彈窗 1：品項詳細資訊彈窗 ================= -->
+  <div class="modal-overlay" id="productModal" onclick="if(event.target===this) closeProductModal()">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeProductModal()">✕</button>
+      <div id="productModalBody" style="padding: 36px;">
+        <!-- 由 app.js 動態填入 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 互動彈窗 2：後台 CRUD 管理介面 (Admin Portal) ================= -->
+  <div class="modal-overlay" id="adminModal" onclick="if(event.target===this) closeAdminModal()">
+    <div class="modal-container admin-modal-container">
+      <button class="modal-close-btn" onclick="closeAdminModal()">✕</button>
+
+      <!-- 後台頂部 -->
+      <div class="admin-header">
+        <div>
+          <div style="font-family: var(--font-display-en); font-size: 0.8rem; color: var(--gold-primary); letter-spacing: 0.15em;">CONCIERGE MANAGEMENT PORTAL</div>
+          <h2 style="font-size: 1.4rem; color: var(--gold-light);">L'HÉRITAGE 典藏管家後台管理系統</h2>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn-sm-action" onclick="handleExportData()">匯出 JSON 備份</button>
+          <button class="btn-sm-action" onclick="handleResetAllData()">恢復原廠設定</button>
+        </div>
+      </div>
+
+      <!-- 分頁頁籤（菜單品項 CRUD / 貴賓預約名冊 CRUD / 尊榮茶包訂單 CRUD） -->
+      <div class="admin-nav-tabs">
+        <button class="admin-tab active" data-tab="menu" onclick="switchAdminTab('menu')">
+          ☕ 菜單品項管理 (CRUD)
+        </button>
+        <button class="admin-tab" data-tab="res" onclick="switchAdminTab('res')">
+          📅 貴賓預約名冊 (CRUD)
+        </button>
+        <button class="admin-tab" data-tab="orders" onclick="switchAdminTab('orders')">
+          📦 尊榮茶包訂單 (CRUD)
+        </button>
+      </div>
+
+      <!-- 後台內容主體 -->
+      <div class="admin-body">
+        
+        <!-- 分頁 1：菜單品項管理 -->
+        <div id="adminMenuSection">
+          <div class="admin-toolbar">
+            <div>
+              <span style="color: var(--text-secondary); font-size: 0.88rem;">即時管理前台展示之咖啡、甜點與季節限定商品，任何增刪改前台即刻連動更新。</span>
+            </div>
+            <button class="btn-luxury btn-primary-gold" onclick="openAddItemModal()" style="padding: 8px 18px; font-size: 0.82rem;">
+              ＋ 新增典藏品項
+            </button>
+          </div>
+
+          <div style="overflow-x: auto;">
+            <table class="table-luxury">
+              <thead>
+                <tr>
+                  <th>圖片</th>
+                  <th>品項名稱</th>
+                  <th>類別</th>
+                  <th>價格</th>
+                  <th>風味筆記</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody id="adminMenuTableBody">
+                <!-- 由 admin.js 渲染 -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 分頁 2：貴賓預約管理 -->
+        <div id="adminResSection" style="display: none;">
+          <div class="admin-toolbar">
+            <span style="color: var(--text-secondary); font-size: 0.88rem;">
+              檢視貴賓透過前台所送出之預約申請，可變更狀態（待確認 / 已確認 / 已完成接待）或進行刪除。
+            </span>
+          </div>
+
+          <div style="overflow-x: auto;">
+            <table class="table-luxury">
+              <thead>
+                <tr>
+                  <th>單號</th>
+                  <th>貴賓尊姓</th>
+                  <th>沙龍席位 / 人數</th>
+                  <th>日期 / 時段</th>
+                  <th>備註需求</th>
+                  <th>目前狀態</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody id="adminResTableBody">
+                <!-- 由 admin.js 渲染 -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 分頁 3：線上茶包訂單管理 (CRUD) -->
+        <div id="adminOrdersSection" style="display: none;">
+          <div class="admin-toolbar">
+            <span style="color: var(--text-secondary); font-size: 0.88rem;">
+              檢視貴賓透過前台「試跑結帳流程」所送出之訂單紀錄，可更新配送狀態（待出貨 / 已出貨 / 已完成）或進行刪除管理。
+            </span>
+          </div>
+
+          <div style="overflow-x: auto;">
+            <table class="table-luxury">
+              <thead>
+                <tr>
+                  <th>單號</th>
+                  <th>貴賓尊姓</th>
+                  <th>配送私邸 / 時段</th>
+                  <th>訂購茶品與規格</th>
+                  <th>實付金額 / 支付方式</th>
+                  <th>目前狀態</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody id="adminOrdersTableBody">
+                <!-- 由 admin.js 渲染 -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 互動彈窗 3：新增 / 編輯品項表單彈窗 ================= -->
+  <div class="modal-overlay" id="itemModalOverlay" onclick="if(event.target===this) closeItemModal()">
+    <div class="modal-container" style="max-width: 640px;">
+      <button class="modal-close-btn" onclick="closeItemModal()">✕</button>
+      <div style="padding: 30px;">
+        <h3 id="itemModalTitle" style="font-size: 1.3rem; color: var(--gold-light); margin-bottom: 20px;">新增典藏品項</h3>
+        
+        <form id="itemForm">
+          <input type="hidden" id="itemId">
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+            <div class="form-group">
+              <label class="form-label">中文名稱 *</label>
+              <input type="text" id="itemName" class="form-input" placeholder="例如：衣索比亞 耶加雪菲" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">英文名稱</label>
+              <input type="text" id="itemEnName" class="form-input" placeholder="Ethiopia Yirgacheffe Heirloom">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+            <div class="form-group">
+              <label class="form-label">分類類別 *</label>
+              <select id="itemCategory" class="form-select">
+                <option value="coffee">頂級珍稀咖啡</option>
+                <option value="dessert">法式私廚甜點</option>
+                <option value="seasonal">特別季節限定</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">尊榮定價 (NT$) *</label>
+              <input type="number" id="itemPrice" class="form-input" placeholder="880" min="0" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+            <div class="form-group">
+              <label class="form-label">特選徽章 / 標籤</label>
+              <input type="text" id="itemBadge" class="form-input" placeholder="例如：莊園冠軍批次、主廚推薦">
+            </div>
+            <div class="form-group">
+              <label class="form-label">產地莊園 / 海拔</label>
+              <input type="text" id="itemOrigin" class="form-input" placeholder="巴拿馬 波奎特 1,800m">
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label class="form-label">處理法 / 熟成方式</label>
+            <input type="text" id="itemProcess" class="form-input" placeholder="例如：低溫厭氧慢速發酵 ｜ 備長炭微火烘焙">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label class="form-label">風味筆記標籤 (以逗號隔開)</label>
+            <input type="text" id="itemNotes" class="form-input" placeholder="茉莉花, 佛手柑, 蜂蜜, 白桃">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label class="form-label">照片圖片網址 (URL)</label>
+            <input type="url" id="itemImage" class="form-input" placeholder="https://images.unsplash.com/...">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label class="form-label">品項詳細鑑賞故事描述</label>
+            <textarea id="itemDesc" class="form-textarea" rows="3" placeholder="請填寫此款咖啡或甜點的背後風土故事與口感描繪..."></textarea>
+          </div>
+
+          <div style="margin-bottom: 24px; display: flex; align-items: center; gap: 8px;">
+            <input type="checkbox" id="itemIsSeasonal" style="width: 18px; height: 18px; accent-color: var(--gold-primary);">
+            <label for="itemIsSeasonal" style="font-size: 0.88rem; color: var(--gold-light);">標記為【特別季節限定商品】（將自動同步展示於首頁焦點限定區）</label>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 12px;">
+            <button type="button" class="btn-sm-action" onclick="closeItemModal()">取消</button>
+            <button type="submit" class="btn-luxury btn-primary-gold" style="padding: 10px 24px;">保存並即時同步</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 行動導航切換函式 -->
+  <script>
+    function toggleMobileNav() {
+      const navLinks = document.querySelector('.nav-links');
+      if (navLinks) {
+        if (navLinks.style.display === 'flex') {
+          navLinks.style.display = 'none';
+        } else {
+          navLinks.style.display = 'flex';
+          navLinks.style.flexDirection = 'column';
+          navLinks.style.position = 'absolute';
+          navLinks.style.top = '100%';
+          navLinks.style.left = '0';
+          navLinks.style.right = '0';
+          navLinks.style.background = '#150F0A';
+          navLinks.style.padding = '20px';
+          navLinks.style.borderBottom = '1px solid var(--border-gold)';
+        }
+      }
+    }
+  </script>
+
+  <!-- 載入腳本 -->
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
